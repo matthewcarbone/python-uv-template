@@ -14,7 +14,7 @@ build-backend = "hatchling.build"
 path = "{% package_name %}/_version.py"
 
 [project.scripts]
-grantgist = "{% package_name %}.entrypoint:entrypoint"
+my_entrypoint = "{% package_name %}.entrypoint:entrypoint"
 
 [tool.ruff]
 line-length = 80
