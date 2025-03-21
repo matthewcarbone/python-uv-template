@@ -1,0 +1,27 @@
+[project]
+name = "{% package_name %}"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+dynamic = ["version"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "{% package_name %}/_version.py"
+
+[project.scripts]
+grantgist = "{% package_name %}.entrypoint:entrypoint"
+
+[tool.ruff]
+line-length = 80
+exclude = ["{% package_name %}/_version.py"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 60
