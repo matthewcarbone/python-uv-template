@@ -5,7 +5,7 @@
 _setup package_name:
     @echo "Setting up your project for the first time!"
     @echo "You have provided package name {{ package_name }}"
-    sed -i '' -e "s/{% package_name %}/test_package_name/" justfile pyproject.toml
+    sed -i '' -e "s/{% package_name %}/test_package_name/" justfile pyproject.toml README.md
     mv package {{ package_name }}
 # REMOVE-ME-END --------------------------------------------------------------
 
